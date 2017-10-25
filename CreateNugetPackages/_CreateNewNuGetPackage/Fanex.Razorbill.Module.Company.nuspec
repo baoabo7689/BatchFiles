@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>Fanex.Razorbill.Module.Company</id>
+    <version>3.0.0.2</version>
+    <title>Fanex.Razorbill.Module.Company</title>
+    <authors>Starixsoft Solutions</authors>
+    <owners>Starixsoft Solutions</owners>
+    <projectUrl>http://nuget</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://nuget</licenseUrl>
+    <summary></summary>
+    <description>Fanex.Razorbill.Module.Company</description>
+    <releaseNotes>Input Release Notes</releaseNotes>
+    <tags>Fanex.Razorbill.Module.Company</tags>
+    <dependencies>
+      <dependency id="Alpha.SubAccount" version="[1.0.0.0-BetListPermission-02,)" />
+      <dependency id="Fanex.Common" version="[1.0.404.97,)" />
+      <dependency id="Fanex.CustomerSetting.Module.Keno.KenoSetting" version="[1.0.0.4,)" />
+      <dependency id="Fanex.File" version="[1.0.0,)" />
+      <dependency id="Fanex.Products" version="[1.0.0.0,)" />
+      <dependency id="Microsoft.AspNet.Mvc" version="[4.0.20710.0,)" />
+      <dependency id="Microsoft.AspNet.Razor" version="[2.0.20710.0,)" />
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="[1.0.0,)" />
+      <dependency id="Microsoft.AspNet.WebPages" version="[2.0.20710.0,)" />
+      <dependency id="Microsoft.Web.Infrastructure" version="[1.0.0.0,)" />
+      <dependency id="RemotingRef" version="[2.0.0.5,)" />
+      <dependency id="SPSRemoting" version="[1.0.0,)" />
+      <dependency id="Sunplus.Agent.Model.Base" version="[3.0.2.9-BetListPermission-08,)" />
+      <dependency id="Sunplus.Agent.Model.Definitions" version="[3.0.1.11,)" />
+      <dependency id="T4.TemplateFileManager" version="[2.2.1,)" />
+      <dependency id="WebGrease" version="[1.1.0,)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\bin\Debug\Fanex.Razorbill.Module.Company.dll" target="lib\net40" />
+    <file src="..\bin\Debug\zh-TW\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\zh-TW" />
+    <file src="..\bin\Debug\zh-CN\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\zh-CN" />
+    <file src="..\bin\Debug\vi-VN\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\vi-VN" />
+    <file src="..\bin\Debug\th-TH\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\th-TH" />
+    <file src="..\bin\Debug\ko-KR\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\ko-KR" />
+    <file src="..\bin\Debug\ja-JP\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\ja-JP" />
+  </files>
+</package>

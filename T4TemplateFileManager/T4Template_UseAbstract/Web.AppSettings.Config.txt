@@ -1,0 +1,12 @@
+﻿  
+       
+      
+ 
+ 
+// Generated helper templates
+// Generated items
+// Alpha.UserGuide\T4Template\Web.PRO.AppSettings.config
+// Alpha.UserGuide\T4Template\Web.BACKUPMNL.AppSettings.config
+// Alpha.UserGuide\T4Template\Web.UAT.AppSettings.config
+// Alpha.UserGuide\T4Template\Web.Sandbox.AppSettings.config
+// Alpha.UserGuide\T4Template\Web.Local.AppSettings.config

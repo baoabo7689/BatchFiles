@@ -1,0 +1,31 @@
+commit 4bca45a6aec3fa1f42da3dae58b5f227fc112855
+Author: Kevin.Mai <kevin.mai@nexcel.vn>
+Date:   Tue Apr 12 11:28:20 2016 +0700
+
+    #00000 - Update Release version - Allbet
+
+Alpha.Auth/Alpha.Auth.csproj
+Alpha.SecurityCode/Alpha.SecurityCode.csproj
+Fanex.Age.UI.Components.Transfer/Fanex.Age.UI.Components.Transfer.csproj
+Fanex.Age.UI.Components/Fanex.Age.UI.Components.csproj
+Fanex.Age.UI.Forecast/Fanex.Age.UI.Forecast.csproj
+Fanex.Age.UI.Totalbets/Fanex.Age.UI.TotalBets.csproj
+Fanex.Age.UI/Fanex.Age.UI.csproj
+Fanex.PTEngine.Age/Fanex.PTEngine.Age.csproj
+Fanex.Razorbill.Module.Company/Fanex.Razorbill.Module.Company.csproj
+Fanex.Razorbill.Security/Fanex.Razorbill.Security.csproj
+Sunplus.Agent.Model.Auth/Sunplus.Agent.Model.Auth.csproj
+Sunplus.Agent.Model.Base/Sunplus.Agent.Model.Base.csproj
+Sunplus.Agent.Model.BetList/Sunplus.Agent.Model.BetList.csproj
+Sunplus.Agent.Model.Bingo/Sunplus.Agent.Model.Bingo.csproj
+Sunplus.Agent.Model.Casino/Sunplus.Agent.Model.Casino.csproj
+Sunplus.Agent.Model.Forecast/Sunplus.Agent.Model.Forecast.csproj
+Sunplus.Agent.Model.IpFormatter/Sunplus.Agent.Model.IpFormatter.csproj
+Sunplus.Agent.Model.Messages/Sunplus.Agent.Model.Messages.csproj
+Sunplus.Agent.Model.P2P/Sunplus.Agent.Model.P2P.csproj
+Sunplus.Agent.Model.Racing/Sunplus.Agent.Model.Racing.csproj
+Sunplus.Agent.Model.Reports/Sunplus.Agent.Model.Reports.csproj
+Sunplus.Agent.Model.SecurityCode/Sunplus.Agent.Model.SecurityCode.csproj
+Sunplus.Agent.Model.TotalBets/Sunplus.Agent.Model.TotalBets.csproj
+Sunplus.Agent.Model.Transfer/Sunplus.Agent.Model.Transfer.csproj
+Sunplus.Agent.UI.Betslip/Sunplus.Agent.UI.BetSlip.csproj

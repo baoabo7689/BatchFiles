@@ -1,0 +1,11 @@
+﻿<#+
+    class SiteInfoDefault : SiteInfo
+    {                                            
+        public override string Version { 
+            get
+            {
+                return "Default_Test";
+            }
+        }
+    }       
+#>

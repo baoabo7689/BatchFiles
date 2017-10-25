@@ -1,0 +1,23 @@
+1. Must config SSH for pulling code
+http://learnaholic.me/2012/10/12/make-powershell-and-git-suck-less-on-windows/
+Configure Git
+	a. Add Git to PATH
+		;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;
+	b. Config user
+		C:\> git config --global user.name "louis.nguyen"
+		C:\> git config --global user.email "louis@nexcel.vn"
+	c. Generate SSH key
+		$ ssh-keygen -t rsa -C "xajler@gmail.com"
+		Generating public/private rsa key pair.
+		Enter file in which to save the key (/c/Users/Kornelije/.ssh/id_rsa):
+
+2. Must have nuget.exe to restore nugets
+3. Please config some variables (if neccessary)
+	@set msBuildDir="C:\Program Files (x86)\MSBuild\14.0\Bin"
+	@set visualStudioVersion=14.0
+	
+4. Put AutoBuildLastestCodeTask.bat inside solution folder and make sure thet when run it, source code is no change (for success pulling latest code)
+	
+	
+	
+	

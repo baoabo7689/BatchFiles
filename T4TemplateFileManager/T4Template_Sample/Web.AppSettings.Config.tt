@@ -1,0 +1,58 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".txt" #>
+<#@ include file="$(SolutionDir)\Packages\T4.TemplateFileManager.2.1.2\tools\ttinc\TemplateFilemanager.CS.ttinclude" #>
+<#@ include file="Configuration.ttinclude" #>
+<#
+    var manager = TemplateFileManager.Create(this);
+    foreach(var site in sites)
+    {
+        var fileName = string.Format("Web.{0}.AppSettings.config", site.Environment);
+        manager.StartNewFile(fileName);
+#>
+<appSettings>
+  <clear />
+  <add key="aspnet:MaxJsonDeserializerMembers" value="15000" />
+  <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true"/>
+  <add key="webpages:Version" value="2.0.0.0"/>
+  <add key="webpages:Enabled" value="false"/>
+  <add key="PreserveLoginUrl" value="true"/>
+  <add key="ClientValidationEnabled" value="true"/>
+  <add key="UnobtrusiveJavaScriptEnabled" value="true"/>
+
+  <add key="IpLocation" value="http://anonym.to/?http://legacytools.dnsstuff.com/tools/ipall.ch?tool_id=67&amp;token=&amp;toolhandler_redirect=0&amp;ip={0}&amp;j=1"/>
+
+  <add key="SportTypeSetting" value="~\App_Data\SportTypeSetting.xml"/>
+  <!--add new key for remote ref-->
+  <add key="RemoteRefURL" value="<#=site.RemotingRefUrl#>"/>
+  <!--End key for remote ref-->
+
+  <!--add new key for LiveCasino-->
+  <add key="CasinoNo" value="01" />
+  <add key="ProductNo" value="01"/>
+  <!--add new key for LiveCasino-->
+
+  <!--Mail config-->
+  <add key="app_mail_id" value="<#=site.MailId#>" />
+  <add key="app_mail_address" value="<#=site.MailAddress#>" />
+  <!--Mail config-->
+  <!--Mail address-->
+  <add key="SoccerTeam" value="<#=site.MailSoccerTeam#>" />
+  <add key="OtherTeam" value="<#=site.MailOtherTeam#>" />
+  <!--Mail address-->
+
+  <!--Email receive error Job waiting match-->
+  <add key="AdminSupport" value="<#=site.MailAdminSupport#>" />
+  <!--Email receive error Job waiting match-->
+
+ <!--add new key RabbitMQ for calling OneWorksAPI-->
+    <add key="RabbitMQHosting" value="<#=site.RabbitMQHosting#>" />
+    <add key="RabbitMQVirtualHost" value="<#=site.RabbitMQVirtualHost#>" />
+    <add key="RabbitMQUserName" value="<#=site.RabbitMQUserName#>" />
+    <add key="RabbitMQPassword" value="<#=site.RabbitMQPassword#>" />
+ <!--end key RabbitMQ for calling OneWorksAPI-->
+
+</appSettings>
+<#
+    }
+    manager.Process();
+#>

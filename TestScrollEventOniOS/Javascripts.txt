@@ -1,0 +1,49 @@
+StickyHeader
+	var message = "base.isWindowScrolling: " + base.isWindowScrolling + "\r\n";
+	message += "base.options.fixedOffset: " + base.options.fixedOffset + "\r\n";
+	message += "base.options.fixedOffset.outerHeight(): " + base.options.fixedOffset.outerHeight() + "\r\n";
+	message += "base.options.fixedOffset: " + base.options.fixedOffset + "\r\n";
+	message += "base.options.fixedOffset: " + base.options.fixedOffset + "\r\n";
+
+	message += "$this.offset(): " + $this.offset() + "\r\n";
+	message += "base.$scrollableArea.scrollTop(): " + scrollableArea.scrollTop() + "\r\n";
+	message += "base.options.cacheHeaderHeight : " + base.options.cacheHeaderHeight + "\r\n";
+	message += " base.$clonedHeader.height() : " + base.$clonedHeader.height() + "\r\n";
+	message += " scrollTop : " + scrollTop + "\r\n";
+	message += " newTopOffset: " + newTopOffset + "\r\n";
+	message += " offset.top: " + offset.top + "\r\n";
+
+	message += " $this.height(): " + $this.height() + "\r\n";
+	message += " headerHeight: " + headerHeight + "\r\n";
+
+	message += " scrolledPastTop: " + scrolledPastTop + "\r\n";
+	message += " notScrolledPastBottom: " + notScrolledPastBottom + "\r\n";
+
+	//alert(message);
+					
+					
+iframe scroll not fire ios javascript
+
+position: fixed; (not work)	
+
+$(window).scroll(function () { alert("scroll1"); }); => not work
+window.onscroll = function () { alert("Scrolled2"); }; => not work			
+window.addEventListener('scroll', function () { alert("Scrolled1"); }); => not work
+
+=> top.window.addEventListener('scroll', base.toggleHeaders); => work
+
+
+body {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}					
+			
+					
+					
+					
+					
+					
+					
+					
+					
+					

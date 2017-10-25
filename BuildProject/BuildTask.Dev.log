@@ -1,0 +1,117 @@
+Build started 11/21/2016 5:59:12 PM.
+Project "D:\Nexcel\GitLab\Rome\AgencyI1\alpha-results\BuildTasks.Dev.targets" on node 1 (default targets).
+MyTargets:
+  .nuget\nuget restore Alpha.Results.sln
+  Installing 'EnterpriseLibrary.Caching 5.0.414.0'.
+  Installing 'EnterpriseLibrary.Common 5.0.414.0'.
+  Installing 'CouchbaseNetClient 1.2.6'.
+  Installing 'EnterpriseLibrary.Data 5.0.414.0'.
+  Installing 'Alpha.Auth 3.0.0.4'.
+  Installing 'Alpha.SecurityCode 3.0.0.2'.
+  Successfully installed 'EnterpriseLibrary.Caching 5.0.414.0'.
+  Successfully installed 'EnterpriseLibrary.Data 5.0.414.0'.
+  Successfully installed 'EnterpriseLibrary.Common 5.0.414.0'.
+  Installing 'EnterpriseLibrary.Unity 5.0.414.0'.
+  Successfully installed 'CouchbaseNetClient 1.2.6'.
+  Successfully installed 'Alpha.SecurityCode 3.0.0.2'.
+  Successfully installed 'Alpha.Auth 3.0.0.4'.
+  Installing 'EnterpriseLibrary.Logging 5.0.414.0'.
+  Installing 'Fanex.Common 1.0.404.97'.
+  Installing 'Fanex.Data 0.5.404.63'.
+  Installing 'Fanex.CustomerSetting.Module.KenoStatus 1.0.0.2'.
+  Installing 'Fanex.Caching 1.0.404.96'.
+  Successfully installed 'EnterpriseLibrary.Unity 5.0.414.0'.
+  Successfully installed 'Fanex.Common 1.0.404.97'.
+  Successfully installed 'EnterpriseLibrary.Logging 5.0.414.0'.
+  Successfully installed 'Fanex.Data 0.5.404.63'.
+  Successfully installed 'Fanex.CustomerSetting.Module.KenoStatus 1.0.0.2'.
+  Successfully installed 'Fanex.Caching 1.0.404.96'.
+  Installing 'Fanex.File 1.0.0'.
+  Installing 'Fanex.Data.DbSettingProviderExtension 1.0.0'.
+  Installing 'Fanex.Logging 1.0.0.0'.
+  Installing 'Fanex.Result.Core.AllBetCasino 1.0.0.10'.
+  Installing 'Fanex.Game.Keno.AlphaResults 3.0.0.1-beta2'.
+  Successfully installed 'Fanex.File 1.0.0'.
+  Installing 'Fanex.Game.Core 1.0.0'.
+  Successfully installed 'Fanex.Data.DbSettingProviderExtension 1.0.0'.
+  Successfully installed 'Fanex.Game.Keno.AlphaResults 3.0.0.1-beta2'.
+  Successfully installed 'Fanex.Logging 1.0.0.0'.
+  Successfully installed 'Fanex.Game.Core 1.0.0'.
+  Installing 'Fanex.Result.Core.CockFighting 1.0.0.3'.
+  Installing 'Fanex.Result.Core-LiveCasino 1.0.0.8'.
+  Installing 'Fanex.Result.Core-MetricGaming 1.0.0.9'.
+  Installing 'Fanex.Result.Core-MicroGaming 1.0.0.2'.
+  Successfully installed 'Fanex.Result.Core.CockFighting 1.0.0.3'.
+  Installing 'Fanex.Result.Core-GoldDeluxe 1.0.1.0'.
+  Successfully installed 'Fanex.Result.Core-LiveCasino 1.0.0.8'.
+  Successfully installed 'Fanex.Result.Core-MicroGaming 1.0.0.2'.
+  Successfully installed 'Fanex.Result.Core-MetricGaming 1.0.0.9'.
+  Successfully installed 'Fanex.Result.Core-GoldDeluxe 1.0.1.0'.
+  Installing 'Fanex.Result.Core-NPOI.2.0.6 2.0.4'.
+  Successfully installed 'Fanex.Result.Core.AllBetCasino 1.0.0.10'.
+  Installing 'Fanex.Result.Core-Sportsbook 1.0.3.2'.
+  Installing 'Fanex.Result.Core-Racing 1.0.0.9'.
+  Installing 'Fanex.Result.Core-NumberGame 1.0.1.0'.
+  Successfully installed 'Fanex.Result.Core-NPOI.2.0.6 2.0.4'.
+  Successfully installed 'Fanex.Result.Core-Sportsbook 1.0.3.2'.
+  Successfully installed 'Fanex.Result.Core-Racing 1.0.0.9'.
+  Successfully installed 'Fanex.Result.Core-NumberGame 1.0.1.0'.
+  Installing 'Microsoft.Web.Infrastructure 1.0.0.0'.
+  Successfully installed 'Microsoft.Web.Infrastructure 1.0.0.0'.
+  Installing 'NPOI 2.0.6'.
+  Installing 'ONEbook.UM 2.0.2.7'.
+  Installing 'RemotingRef 1.0.0.4'.
+  Successfully installed 'ONEbook.UM 2.0.2.7'.
+  Installing 'SharpZipLib 0.86.0'.
+  Successfully installed 'RemotingRef 1.0.0.4'.
+  Successfully installed 'SharpZipLib 0.86.0'.
+  Successfully installed 'NPOI 2.0.6'.
+  Installing 'SPSRemoting 1.0.0'.
+  Installing 'Sunplus.Agent.Model.Base 3.0.0.7'.
+  Successfully installed 'SPSRemoting 1.0.0'.
+  Installing 'Sunplus.Agent.Model.DataAccessLibrary 3.0.0.1'.
+  Successfully installed 'Sunplus.Agent.Model.Base 3.0.0.7'.
+  Successfully installed 'Sunplus.Agent.Model.DataAccessLibrary 3.0.0.1'.
+  Installing 'Sunplus.Agent.Model.Definitions 3.0.1.4-allbet2'.
+  Installing 'Sunplus.Agent.Model.RemotingRef 3.0.0.2'.
+  Installing 'Sunplus.Agent.Utilities 3.0.0.3'.
+  Successfully installed 'Sunplus.Agent.Model.Definitions 3.0.1.4-allbet2'.
+  Successfully installed 'Sunplus.Agent.Model.RemotingRef 3.0.0.2'.
+  Successfully installed 'Sunplus.Agent.Utilities 3.0.0.3'.
+  Installing 'Fanex.Caching 1.0.404.97'.
+  Successfully installed 'Fanex.Caching 1.0.404.97'.
+  Unable to find version '3.4.1.9004' of package 'Antlr'.
+  Unable to find version '3.0.0' of package 'bootstrap'.
+  Unable to find version '1.10.2' of package 'jQuery'.
+  Unable to find version '2.0.2' of package 'MediatR'.
+  Unable to find version '5.2.3' of package 'Microsoft.AspNet.Mvc'.
+  Unable to find version '3.2.3' of package 'Microsoft.AspNet.Razor'.
+  Unable to find version '1.1.3' of package 'Microsoft.AspNet.Web.Optimization'.
+  Unable to find version '3.2.3' of package 'Microsoft.AspNet.WebPages'.
+  Unable to find version '1.0.0' of package 'Microsoft.CodeDom.Providers.DotNetCompilerPlatform'.
+  Unable to find version '2.6.2' of package 'Modernizr'.
+  Unable to find version '5.0.4' of package 'Newtonsoft.Json'.
+  Unable to find version '3.7.0' of package 'RazorEngine'.
+  Unable to find version '105.2.3' of package 'RestSharp'.
+  Unable to find version '3.1.2' of package 'SimpleInjector'.
+  Unable to find version '3.1.2' of package 'SimpleInjector.Integration.Web'.
+  Unable to find version '3.1.2' of package 'SimpleInjector.Integration.Web.Mvc'.
+  Unable to find version '1.5.2' of package 'WebGrease'.
+  Unable to find version '4.1.1' of package 'FluentAssertions'.
+  Unable to find version '1.9.2.0' of package 'NSubstitute'.
+  Unable to find version '3.2.1' of package 'NUnit'.
+  Unable to find version '2.0.0' of package 'NUnitTestAdapter'.
+D:\Nexcel\GitLab\Rome\AgencyI1\alpha-results\BuildTasks.Dev.targets(7,3): error MSB3073: The command ".nuget\nuget restore Alpha.Results.sln" exited with code 1.
+Done Building Project "D:\Nexcel\GitLab\Rome\AgencyI1\alpha-results\BuildTasks.Dev.targets" (default targets) -- FAILED.
+
+
+Build FAILED.
+
+"D:\Nexcel\GitLab\Rome\AgencyI1\alpha-results\BuildTasks.Dev.targets" (default target) (1) ->
+(MyTargets target) -> 
+  D:\Nexcel\GitLab\Rome\AgencyI1\alpha-results\BuildTasks.Dev.targets(7,3): error MSB3073: The command ".nuget\nuget restore Alpha.Results.sln" exited with code 1.
+
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:07.32

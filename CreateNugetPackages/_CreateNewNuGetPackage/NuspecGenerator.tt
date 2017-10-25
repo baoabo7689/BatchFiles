@@ -1,0 +1,110 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".txt" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Xml" #>
+<#@ include file="$(SolutionDir)\Packages\T4.TemplateFileManager.2.2.1\tools\ttinc\TemplateFilemanager.CS.ttinclude" #>
+<#
+    var serviceProvider = Host as IServiceProvider;
+    var dte = serviceProvider.GetService(typeof(DTE)) as DTE;
+    var configName = dte.Solution.SolutionBuild.ActiveConfiguration.Name;
+
+    var isDebug = configName == "Debug";
+
+    var packageVersion = "";
+    var releaseNotes = "Input Release Notes";
+
+
+    var projectFolderPath = Host.ResolvePath(@"..");
+    var assemblyInfoPath = Path.Combine(projectFolderPath, @"Properties\AssemblyInfo.cs");
+    
+    var path = this.Host.ResolveAssemblyReference("$(TargetPath)");
+    var assemblyInfo = System.Reflection.Assembly.Load(System.IO.File.ReadAllBytes(path));
+    var version = assemblyInfo.GetName().Version.ToString();
+    var assemblyName =  assemblyInfo.GetName().Name;
+
+    if(string.IsNullOrEmpty(packageVersion)) {
+        packageVersion = version;
+    }
+
+    var languages = new[] { "zh-TW", "zh-CN", "vi-VN", "th-TH", "ko-KR", "ja-JP"};
+
+    var outputFolder = isDebug ? "Debug" : "Release";
+    var resourcePath = Path.Combine(projectFolderPath, "bin", outputFolder, languages[0], assemblyName+ ".resources.dll");
+    var isSupportLanguages = File.Exists(resourcePath);
+
+    var manager = TemplateFileManager.Create(this);
+    manager.StartNewFile(assemblyName + ".nuspec");
+
+    var packages = PackageParser.GetDependencies(Path.Combine(projectFolderPath, "packages.config"));
+#>
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id><#=assemblyName#></id>
+    <version><#=packageVersion#></version>
+    <title><#=assemblyName#></title>
+    <authors>Starixsoft Solutions</authors>
+    <owners>Starixsoft Solutions</owners>
+    <projectUrl>http://nuget</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://nuget</licenseUrl>
+    <summary></summary>
+    <description><#=assemblyName#></description>
+    <releaseNotes><#=releaseNotes#></releaseNotes>
+    <tags><#=assemblyName#></tags>
+    <dependencies>
+<#
+        foreach(var package in packages) 
+        {
+#>
+      <dependency id="<#=package.Key#>" version="[<#=package.Value#>,)" />
+<#
+        }
+#>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\bin\\<#=outputFolder#>\\<#=assemblyName#>.dll" target="lib\net40" />
+<#
+    if(isSupportLanguages) {
+        foreach(var language in languages) {
+#>
+    <file src="..\bin\\<#=outputFolder#>\\<#=language#>\\<#=assemblyName#>.resources.dll" target="lib\net40\\<#=language#>" />
+<#
+        }
+    }
+#>
+  </files>
+</package>
+<#
+    manager.Process();
+#>
+<#+
+    class PackageParser {
+        public static Dictionary<string, string> GetDependencies(string packagePath)
+        {
+            var ignoredPackages = new List<string> 
+            {
+                "CreateNewNuGetPackageFromProjectAfterEachBuild",
+                "Fanex.CreateNuGetPackageAfterBuild"
+            };
+
+            var result = new Dictionary<string, string>();
+            XmlDocument doc = new XmlDocument();
+            doc.Load(packagePath);
+            foreach (XmlNode node in doc.SelectNodes("/packages/package"))
+            {
+                var packageId = node.Attributes["id"].Value;
+                if(ignoredPackages.Contains(packageId)) {
+                    continue;
+                }
+
+                result.Add(packageId, node.Attributes["version"].Value);
+            }
+
+            return result;
+        }
+    }
+#>

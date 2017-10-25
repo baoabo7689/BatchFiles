@@ -1,0 +1,576 @@
+<#@ import namespace="System" #>
+
+<#
+    
+        
+        #region For AppSetting file
+        public string RemotingRefUrl
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "tcp://10.40.40.29:8098/CallGetRefFunction";
+                    case SiteEnvironment.BACKUPMNL:
+                        return "tcp://10.40.40.130:8098/CallGetRefFunction";
+
+                    case SiteEnvironment.UAT:
+                        return "tcp://10.40.40.29:8098/CallGetRefFunction";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "tcp://10.18.200.209:8888/CallGetRefFunction";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        
+        public string MailId
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                    case SiteEnvironment.BACKUPMNL:
+                        return "42";
+
+                    case SiteEnvironment.UAT:
+                        return "42";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "1";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string MailAddress
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.UAT:
+                    case SiteEnvironment.PRO:
+                        return "net.tcp://10.40.40.127:8585/MailService";
+
+                    case SiteEnvironment.BACKUPMNL:
+                        return "net.tcp://10.2.98.3:8585/MailService";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "net.tcp://10.18.200.209:8787/MailService";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string MailSoccerTeam
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "keyscore@sms-vn.com;yung9288@hotmail.com;tracychieng@sms-vn.com";
+
+                    case SiteEnvironment.BACKUPMNL:
+                        return "qa@starixsoft.com;automail@enpine.com";
+
+                    case SiteEnvironment.UAT:
+                        return "keyscore@sms-vn.com;yung9288@hotmail.com;tracychieng@sms-vn.com";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "kaden.trinh@nexcel.vn";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string MailOtherTeam
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "mnl_kst@gwibsi.com;irene.lol@gwibsi.com";
+
+                    case SiteEnvironment.BACKUPMNL:
+                        return "qa@starixsoft.com;automail@enpine.com";
+
+                    case SiteEnvironment.UAT:
+                        return "mnl_kst@gwibsi.com;irene.lol@gwibsi.com";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "kaden.trinh@nexcel.vn";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string MailAdminSupport
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                    case SiteEnvironment.BACKUPMNL:
+                        return "production.error@starixsoft.com";
+
+                    case SiteEnvironment.UAT:
+                        return "olympus.errors@gmail.com";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "kaden.trinh@nexcel.vn";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string RabbitMQHosting
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "10.40.40.127";
+
+                    case SiteEnvironment.BACKUPMNL:
+                        return "10.40.40.127";
+
+                    case SiteEnvironment.UAT:
+                        return "10.40.40.127";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "10.18.200.209";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+         public string RabbitMQVirtualHost
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "/NAPGateway-PRO";
+                    case SiteEnvironment.BACKUPMNL:
+                        return "/NAPGateway-UAT";
+
+                    case SiteEnvironment.UAT:
+                        return "/NAPGateway-UAT";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "/";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+         public string RabbitMQUserName
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                         return "NAPGateway";
+                    case SiteEnvironment.BACKUPMNL:
+                        return "NAPGateway";
+
+                    case SiteEnvironment.UAT:
+                        return "NAPGateway";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "client209";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+         public string RabbitMQPassword
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "L8wn?LU";
+                    case SiteEnvironment.BACKUPMNL:
+                        return "L8wn?LU";
+
+                    case SiteEnvironment.UAT:
+                        return "L8wn?LU";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "1234aa";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+        #endregion End for AppSetting file
+
+        #region For Webconfig file
+        public string LoggingMsmqPath
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return @"FormatName:DIRECT=tcp:10.40.40.127\private$\entlib";
+                    case SiteEnvironment.BACKUPMNL:
+                        return @"FormatName:DIRECT=tcp:10.2.98.3\private$\entlib";
+
+                    case SiteEnvironment.UAT:
+                        return @"FormatName:DIRECT=tcp:10.40.40.73\private$\entlib";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return @"FormatName:DIRECT=tcp:10.18.200.209\private$\entlib";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+        
+        public string LoggingDefaultCategory
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                    case SiteEnvironment.BACKUPMNL:
+                        return "NAP-Settlement";
+
+                    case SiteEnvironment.UAT:
+                        return "NAP-Settlement";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "NAP-Settlement";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+        
+        public string ErrorMode
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                             return "RemoteOnly";
+
+                    case SiteEnvironment.BACKUPMNL:
+                   
+                    case SiteEnvironment.UAT:
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "Off";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+        
+        public string DebugMode
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "false";
+                    case SiteEnvironment.BACKUPMNL:
+                    case SiteEnvironment.UAT:
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "true";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+        public string EnvironmentSettings
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                    case SiteEnvironment.BACKUPMNL:
+                        return "LIVE";
+
+                    case SiteEnvironment.UAT:
+                        return "UAT";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "UAT";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string SiteIdSettings
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                    case SiteEnvironment.BACKUPMNL:
+                        return "18";
+
+                    case SiteEnvironment.UAT:
+                        return "18";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "67";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string UMAddress
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "tcp://10.40.40.150:8990/UMControllerInterface";
+                    case SiteEnvironment.BACKUPMNL:
+                        return "tcp://10.2.96.1:8990/UMControllerInterface";
+
+                    case SiteEnvironment.UAT:
+                        return "tcp://10.40.40.150:8990/UMControllerInterface";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "http://10.21.10.19:8123/home/umstatus";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+         public string EnableCheckUM
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                    case SiteEnvironment.BACKUPMNL:
+                        return "true";
+
+                    case SiteEnvironment.UAT:
+                        return "false";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "false";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string EnableReCheckin
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                    case SiteEnvironment.BACKUPMNL:
+                        return "true";
+
+                    case SiteEnvironment.UAT:
+                        return "true";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "false";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string HubUrl
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "http://58.86.55.10/NapSettlement/UserLogin/login";
+                    case SiteEnvironment.BACKUPMNL:
+                        return "http://nap-hub.ibcbk.com/NapSettlement/UserLogin/login";
+
+                    case SiteEnvironment.UAT:
+                        return "http://58.86.55.10/NapSettlement/UserLogin/login";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "http://localhost:54332/NAPHub";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string StateConnectionString
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "stateConnectionString=\"tcpip=10.40.40.135:42424\"";
+                    case SiteEnvironment.BACKUPMNL:
+                        return "stateConnectionString=\"tcpip=10.2.12.10:42424\"";
+
+                    case SiteEnvironment.UAT:
+                        return "stateConnectionString=\"tcpip=127.0.0.1:42424\"";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string AuthorizeDomain
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                        return "<add Name=\"58.86.55.10\" Path=\"/NapSettlement\"></add>";
+                    case SiteEnvironment.BACKUPMNL:
+                        return "<add Name=\"10.2.12.8\" Path=\"/NapSettlement\"></add>";
+
+                    case SiteEnvironment.UAT:
+                        return "<add Name=\"58.86.55.10\" Path=\"/NapSettlement\"></add>";
+
+                    case SiteEnvironment.Local:
+                    case SiteEnvironment.Sandbox:
+                        return "<add Name=\"10.18.200.209:7123\" Path=\"/\" />";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string SPName
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.PRO:
+                    case SiteEnvironment.BACKUPMNL:
+                        return "~\\App_Data\\Pro\\FanexSpName.xml";
+
+                    case SiteEnvironment.UAT:
+                        return "~\\App_Data\\UAT\\FanexSpName.xml";
+
+                    case SiteEnvironment.Local:
+                        return "~\\App_Data\\Local\\FanexSpName.xml";
+                    case SiteEnvironment.Sandbox:
+                        return "~\\App_Data\\Sandbox\\FanexSpName.xml";
+
+                    default:
+                        return string.Empty;
+                }
+            }
+        }
+
+        public string DecryptionKey
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.BACKUPMNL:
+                        return "436E102A02B3582E206F1111DC137F5F2BFC57EBFB8ECD6736596ABDA63B9A65";
+
+                    default:
+                        return "DEFD2134E4817E65377651AC8D14C65BC01AA1AD6CAFED57720D0C0AB670456A";
+                }
+            }
+        }
+
+
+        public string ValidationKey
+        {
+            get
+            {
+                switch(Environment)
+                {
+                    case SiteEnvironment.BACKUPMNL:
+                        return "82DD5F7E8AEE17163191F82D6E74F88716B3A834BD6D1DC5F32CB2F613222E36144B019843C69D711C8EE551F341FDFD60B1AB77F943B02A00467A0D2D632EEB";
+
+                    default:
+                        return "DA13C9789D77B2FB7D6C182D4093182D0F9F52D8B498AF9C1E59826A48A60CFCC1E02652EE0A3A996EF4E4439A00CC8EAE42388F0DB5A7795933BD830A31ADB9";
+                }
+            }
+        }
+
+        #endregion End for Webconfig file
+    }
+#>

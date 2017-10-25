@@ -1,0 +1,4 @@
+<#
+    var packageVersion = "";
+    var releaseNotes = "Input Release Notes";
+#>

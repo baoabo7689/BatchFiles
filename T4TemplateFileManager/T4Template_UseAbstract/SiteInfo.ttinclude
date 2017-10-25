@@ -1,0 +1,8 @@
+﻿<#+
+    abstract class SiteInfo
+    {
+        public SiteEnvironment Environment { get; set; }  
+
+        public abstract string Version { get; }
+    }       
+#>

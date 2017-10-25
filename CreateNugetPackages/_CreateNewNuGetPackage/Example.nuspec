@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <version>3.0.0.3-BetListPermission-10</version>
+    <releaseNotes>Any Release Notes</releaseNotes>
+    <summary>Please Input Summary</summary>
+    <description>Please Input Description</description>
+
+    <id>Fanex.Razorbill.Module.Company</id>
+    <authors>Nexcel Solutions</authors>
+    <owners>Nexcel Solutions</owners>
+    <licenseUrl>http://nuget.nexdev.net</licenseUrl>
+    <projectUrl>http://nuget.nexdev.net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags></tags>
+    <dependencies>
+      <dependency id="Sunplus.Agent.Model.Base" version="3.0.0.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\bin\Debug\Fanex.Razorbill.Module.Company.dll" target="Contents" />
+    <file src="..\bin\Debug\Fanex.Razorbill.Module.Company.dll" target="lib\net40" />
+    <file src="..\bin\Debug\zh-TW\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\zh-TW" />
+    <file src="..\bin\Debug\zh-CN\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\zh-CN" />
+    <file src="..\bin\Debug\vi-VN\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\vi-VN" />
+    <file src="..\bin\Debug\th-TH\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\th-TH" />
+    <file src="..\bin\Debug\ko-KR\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\ko-KR" />
+    <file src="..\bin\Debug\ja-JP\Fanex.Razorbill.Module.Company.resources.dll" target="lib\net40\ja-JP" />
+  </files>
+</package>

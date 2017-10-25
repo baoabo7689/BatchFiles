@@ -1,0 +1,9 @@
+﻿
+
+// Generated helper templates
+// Generated items
+// Fanex.NAP.Settlement.Site\Configuration\Web.PRO.config
+// Fanex.NAP.Settlement.Site\Configuration\Web.BACKUPMNL.config
+// Fanex.NAP.Settlement.Site\Configuration\Web.UAT.config
+// Fanex.NAP.Settlement.Site\Configuration\Web.Sandbox.config
+// Fanex.NAP.Settlement.Site\Configuration\Web.Local.config

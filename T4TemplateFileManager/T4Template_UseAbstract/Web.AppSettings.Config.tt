@@ -1,0 +1,43 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".txt" #>
+<#@ include file="$(SolutionDir)\Packages\T4.TemplateFileManager.2.2.1\tools\ttinc\TemplateFilemanager.CS.ttinclude" #>  
+<#@ include file="SiteEnvironments.ttinclude" #>       
+<#@ include file="SiteInfo.ttinclude" #>      
+<#@ include file="SiteInfoDefault.ttinclude" #> 
+<#@ include file="SiteInfoLocal.ttinclude" #> 
+<#    
+    var sites = new SiteInfo[]{
+         new SiteInfoLocal
+        {
+            Environment = SiteEnvironment.Local
+        },
+        new SiteInfoDefault
+        {
+            Environment = SiteEnvironment.Sandbox
+        },
+        new SiteInfoDefault
+        {
+            Environment = SiteEnvironment.UAT
+        },
+        new SiteInfoDefault
+        {
+            Environment = SiteEnvironment.BACKUPMNL
+        },
+        new SiteInfoDefault
+        {
+            Environment = SiteEnvironment.PRO
+        }
+    };
+
+    var manager = TemplateFileManager.Create(this);
+    foreach(var site in sites)
+    {
+        var fileName = string.Format("Web.{0}.AppSettings.config", site.Environment);
+        manager.StartNewFile(fileName);
+#><appSettings>
+    <add key="version" value="<#=site.Version#>" />
+</appSettings><#
+    }
+
+    manager.Process();
+#>

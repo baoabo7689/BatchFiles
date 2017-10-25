@@ -1,0 +1,4 @@
+﻿
+// Generated helper templates
+// Generated items
+// D:\Nexcel\GitLab\Rome\AgencyI1\alpha-modules\Sunplus.Agent.Model.Base\_CreateNewNuGetPackage\Sunplus.Agent.Model.Base.nuspec

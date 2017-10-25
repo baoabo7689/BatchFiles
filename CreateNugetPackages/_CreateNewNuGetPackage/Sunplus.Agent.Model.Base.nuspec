@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>Sunplus.Agent.Model.Base</id>
+    <version>3.0.2.9</version>
+    <title>Sunplus.Agent.Model.Base</title>
+    <authors>Starixsoft Solutions</authors>
+    <owners>Starixsoft Solutions</owners>
+    <projectUrl>http://nuget</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://nuget</licenseUrl>
+    <summary></summary>
+    <description>Sunplus.Agent.Model.Base</description>
+    <releaseNotes>Input Release Notes</releaseNotes>
+    <tags>Sunplus.Agent.Model.Base</tags>
+    <dependencies>
+      <dependency id="Alpha.SubAccount" version="[1.0.0.0-BetListPermission-02,)" />
+      <dependency id="Fanex.Common" version="[1.0.404.97,)" />
+      <dependency id="Fanex.File" version="[1.0.0,)" />
+      <dependency id="Fanex.Products" version="[1.0.0.0,)" />
+      <dependency id="RemotingRef" version="[2.0.0.5,)" />
+      <dependency id="SPSRemoting" version="[1.0.0,)" />
+      <dependency id="Sunplus.Agent.Model.Definitions" version="[3.0.1.11,)" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\bin\Debug\Sunplus.Agent.Model.Base.dll" target="lib\net40" />
+  </files>
+</package>
